@@ -12,7 +12,11 @@ Check whether the series converges algebraically and computationally.
 This assignment was probably made to show that IEEE754 is a terrible format that is only good for 3D graphics.
 
 **I used dec64 to check whether it has to do with the mantissa adding bullshit of IEEE754, it turned ot that precision was the problem**
+
+
 **I used Haskell's BigFloat library to check whether 50 decimal points of precision was enough, it wasn't**
+
+
 **Finally, I used trhe astro_float library to get the proper result, which is 5 instead of 100**
 
 *Should you want to find the algebraic solution, fucking do it yourself*
