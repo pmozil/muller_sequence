@@ -15,7 +15,7 @@ This assignment was probably made to show that IEEE754 is a terrible format that
 **I used Haskell's BigFloat library to check whether 50 decimal points of precision was enough, it wasn't**
 **Finally, I used trhe astro_float library to get the proper result, which is 5 instead of 100**
 
-*Should you want to find the algebraic solutino, fucking do it yourself**
+*Should you want to find the algebraic solution, fucking do it yourself*
 
 # Running the programs
 ## C
