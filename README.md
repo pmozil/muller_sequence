@@ -14,7 +14,19 @@ This assignment was probably made to show that IEEE754 is a terrible format that
 **I used dec64 to check whether it has to do with the mantissa adding bullshit of IEEE754, it turned ot that precision was the problem**
 
 
-**I used Haskell's BigFloat library to check whether 50 decimal points of precision was enough, it wasn't**
+**I used Haskell's Rational number type to erase the precision problem entirely, as rationals are nice. The solution fits into five lines of code:
+```haskell
+module Main where
+
+fnSeq :: [(Rational, Rational)]
+fnSeq = iterate fn (4.25::Rational, 4::Rational)
+    where
+        fn (a1, a2) = (108 - (815 - (1500 / a2)) / a1, a1)
+
+main :: IO ()
+main = print $ map (\(x, y) -> (fromRational x, fromRational y)) $ take 100 fnSeq
+```
+**
 
 
 **Finally, I used trhe astro_float library to get the proper result, which is 5 instead of 100**
